@@ -15,7 +15,7 @@
 
 My personal site
 
-**→ [thewhite73.github.io](https://thewhite73.github.io)**
+**→ [thewhite73.github.io](dazmath.dev)**
 
 <br>
 
