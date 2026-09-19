@@ -6,9 +6,10 @@
 </p>
 
 <p align="center">
-  <a href="dazmath.dev"><img alt="Live site" src="dazmath.dev-ff9d3f?style=flat-square&logo=githubpages&logoColor=white"></a>
+  <a href="https://dazmath.dev"><img alt="Live site" src="https://img.shields.io/badge/live-dazmath.dev-ff9d3f?style=flat-square&logo=githubpages&logoColor=white"></a>
   <a href="https://www.linkedin.com/in/daz-math/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-daz--math-63b3d4?style=flat-square&logo=linkedin&logoColor=white"></a>
   <a href="mailto:amayazabaladaniel@gmail.com"><img alt="Email" src="https://img.shields.io/badge/email-contact-7b8ad4?style=flat-square&logo=gmail&logoColor=white"></a>
+  <img alt="No dependencies" src="https://img.shields.io/badge/dependencies-none-5f7089?style=flat-square">
 </p>
 
 ---
