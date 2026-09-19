@@ -331,6 +331,8 @@ h2{
 .writing h3{font-family:var(--f-head);font-weight:600;font-size:17.5px;margin:0;color:#fff;line-height:1.35;text-wrap:balance}
 .writing p{margin:0;font-size:14.3px;color:var(--text-2)}
 .writing__venue{font-family:var(--f-mono);font-size:11.5px;color:var(--text-3);letter-spacing:.04em}
+.writing__authors{font-family:var(--f-mono);font-size:11.5px;color:var(--text-2);letter-spacing:.02em;margin:0;line-height:1.7}
+.writing__authors b{color:var(--accent);font-weight:500}
 .writing__acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:6px}
 .writing__acts .btn{font-size:12px;padding:7px 13px}
 .writing--pending{border-style:dashed;border-color:var(--rule)}
@@ -338,10 +340,10 @@ h2{
 .pending-note{
   font-family:var(--f-mono);font-size:11px;color:var(--text-3);letter-spacing:.04em;
   border-top:1px dashed var(--rule);padding-top:10px;margin-top:6px;
-  display:flex;align-items:center;gap:8px;
+  display:flex;align-items:flex-start;gap:8px;
 }
 .pending-note::before{
-  content:"";width:6px;height:6px;flex:none;border-radius:50%;
+  content:"";width:6px;height:6px;flex:none;border-radius:50%;margin-top:.42em;
   background:var(--hot);box-shadow:0 0 9px rgba(224,86,106,.8);
 }
 
@@ -555,7 +557,6 @@ h2{
       <a href="#writings">Writings</a>
       <a href="#projects">Projects</a>
       <a href="#teaching">Teaching</a>
-      <a href="#notes">Notes</a>
       <a href="#away">Away</a>
       <a href="#contact">Contact</a>
       <a href="#cv" class="nav__cv">CV</a>
@@ -1180,7 +1181,7 @@ h2{
             </div>
             <div class="now__row">
               <dt>Working on</dt>
-              <dd>Further results on sparsity-promoting priors, still with Ben and Nick.</dd>
+              <dd>Further results on sparsity-promoting priors, with Ben Adcock, Nick Huang, Maksym Neyra-Nesterenko and Omar Pacheco.</dd>
             </div>
             <div class="now__row">
               <dt>Reading</dt>
@@ -1973,7 +1974,7 @@ h2{
             <li>Built models in PyTorch searching for algorithms whose numerics come close to the theoretical bounds on the covering number of a given distribution &mdash; tested mainly on Fashion-MNIST and CelebA.</li>
             <li>Modelled and generalised Bayesian priors so that the covering number of the underlying distribution becomes a usable measure of how complex a dataset is.</li>
             <li>Scoped an open question with no predefined solution path: distilled a dense prior literature into a working framework and isolated which assumptions actually drove the results.</li>
-            <li>Still ongoing &mdash; extending the results to sparsity-promoting priors, with Ben and Nick.</li>
+            <li>Still ongoing &mdash; extending the results to sparsity-promoting priors, with Ben Adcock, Nick Huang, Maksym Neyra-Nesterenko and Omar Pacheco.</li>
           </ul>
           <figure class="entry__eq">
             <div class="eq eq--center" style="--ar:5.570"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 215.071 38.611" role="img" aria-label="equation" preserveAspectRatio="xMidYMid meet" class="eq-svg">
@@ -2411,25 +2412,6 @@ h2{
 
       <article class="project">
         <div class="project__body">
-          <h3>CART vs. ID3 for over-the-counter medical recommendation</h3>
-          <p class="project__sup">Saint Mary's University &middot; supervised by Mengjun Hu, PhD</p>
-          <p>
-            Implemented and compared decision-tree algorithms for classifying pharmaceutical data,
-            writing the Gini-impurity computation directly and evaluating where each splitting
-            criterion buys real accuracy rather than depth.
-          </p>
-          <div class="tags">
-            <span class="tag">Decision trees</span><span class="tag">Gini impurity</span>
-            <span class="tag">Model evaluation</span>
-          </div>
-          <div class="writing__acts">
-            <a class="btn" href="https://github.com/TheWhite73" target="_blank" rel="noopener">Repository</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project__body">
           <h3>Multi-currency expense tracker</h3>
           <p class="project__sup">Personal tool &middot; Python + Streamlit</p>
           <p>
@@ -2454,54 +2436,17 @@ h2{
   <div class="wrap">
     <div class="section__head">
       <h2>Teaching</h2>
-      <p class="section__sub">Linear algebra and analytic geometry, to undergraduates who arrive with very different backgrounds.</p>
+      <p class="entry__meta" style="margin:14px 0 0"><b>Oct 2025 &ndash; May 2026</b><span>Universidad de Antioquia</span><span>10 h / week</span></p>
     </div>
-    <div class="split">
-      <div class="prose">
-        <p class="entry__meta" style="margin-bottom:12px"><b>Oct 2025 &ndash; May 2026</b><span>Universidad de Antioquia, Medell&iacute;n</span><span>10 h / week</span></p>
-        <p>
-          I held a merit-based academic stipend as a teaching assistant, running the sessions
-          that sit between the lecture and the problem set. The material was abstract and
-          quantitative; the audience was not uniform. Most of the work was calibration &mdash;
-          finding the level of detail a given room needed, and changing it live when it turned
-          out to be wrong.
-        </p>
-        <p>
-          I diagnosed the points where students consistently got stuck and rebuilt the study
-          material to target those specific gaps rather than re-covering the syllabus. Review
-          sessions connected theory to a concrete application, and I fielded questions on the
-          spot, reformulating an explanation until it landed. All of it alongside full-time
-          coursework, which made the fixed weekly commitment the real constraint.
-        </p>
-      </div>
-      <div>
-        <div class="edu">
-          <div class="edu__item">
-            <h3>Courses supported</h3>
-            <p style="margin-top:6px">Linear Algebra &middot; Analytic Geometry</p>
-          </div>
-          <div class="edu__item">
-            <h3>Gestores para la Ciudadan&iacute;a Intercultural y Global</h3>
-            <div class="edu__line"><b>Jun 2023 &ndash; Jul 2024</b><span>UdeA</span></div>
-            <p>
-              Led initiatives helping international students adapt academically and culturally,
-              and organised exchange events across the faculty.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="prose">
+      <p>
+        Teaching assistant in <strong>linear algebra</strong> and <strong>analytic geometry</strong>,
+        on a merit-based academic stipend. The material was abstract; the room was not uniform. Most
+        of the work was calibration &mdash; finding the level of detail a given group needed,
+        rebuilding the study material around the points where students actually got stuck, and
+        reformulating an explanation on the spot until it landed.
+      </p>
     </div>
-  </div>
-</section>
-
-<!-- ========================= NOTES ========================= -->
-<section class="section" id="notes">
-  <div class="wrap">
-    <div class="section__head">
-      <h2>Notes</h2>
-      <p class="section__sub">Short write-ups from whatever I am reading &mdash; currently Brezis and Kreyszig, alongside the diffusion-model literature.</p>
-    </div>
-    <div class="notes" id="notesList"></div>
   </div>
 </section>
 
@@ -2509,8 +2454,8 @@ h2{
 <section class="section" id="away">
   <div class="wrap">
     <div class="section__head">
-      <h2>Away from the desk</h2>
-      <p class="section__sub">Languages, places, and people worth listening to &mdash; and as many mountains as British Columbia will give me.</p>
+      <h2>Away from the board</h2>
+      <p class="section__sub">Languages, mountains, and people worth listening to.</p>
     </div>
 
     <div class="photos">
@@ -2540,10 +2485,11 @@ h2{
         </p>
       </article>
       <article class="away__item">
-        <h3>Travelling, and the people in it</h3>
+        <h3>Volunteering, and the people in it</h3>
         <p>
-          The part I actually travel for: meeting people who know things I do not, and getting them
-          to explain.
+          I volunteer because of who it puts me in front of. I enjoy learning from people and
+          having them teach me their way of seeing the world &mdash; that is how I get further
+          than I would on my own.
         </p>
       </article>
     </div>
@@ -2682,7 +2628,8 @@ const WRITINGS = [
     kind: "preprint",
     title: "Covering numbers for sparsity-promoting priors",
     year: "2026",
-    venue: "In preparation — with Ben Adcock and Nick, Simon Fraser University",
+    authors: "B. Adcock, D. Amaya, N. Huang, M. Neyra-Nesterenko, O. Pacheco",
+    venue: "In preparation — Simon Fraser University",
     blurb: "Extending covering-number estimates from generative priors to sparsity-promoting ones, so that the same complexity measure covers both.",
     file: null            // <-- cámbialo por "pdf/preprint-covering.pdf"
   },
@@ -2695,12 +2642,6 @@ const WRITINGS = [
     lang: "Spanish",
     file: "pdf/TDA_Morse_Smale_Amaya_Segovia.pdf"
   }
-];
-
-const NOTES = [
-  { date: "2026",   title: "Mercer's theorem, and why kernels and Gaussian priors are the same object", tag: "Functional analysis", file: null },
-  { date: "2026",   title: "Reading Brezis: weak convergence and the price of reflexivity",             tag: "Functional analysis", file: null },
-  { date: "2025",   title: "Score matching, in the language of an inverse problem",                     tag: "Generative models",   file: null }
 ];
 
 /* ==================================================================
@@ -2773,24 +2714,12 @@ const NOTES = [
         '<span class="writing__year">' + w.year + '</span>' +
       '</div>' +
       '<h3>' + w.title + '</h3>' +
+      (w.authors ? '<p class="writing__authors">' + w.authors.replace("D. Amaya", "<b>D. Amaya</b>") + '</p>' : '') +
       '<p class="writing__venue">' + w.venue + '</p>' +
       '<p>' + w.blurb + '</p>' +
       (w.file ? '' : '<p class="pending-note">In preparation &mdash; PDF coming soon</p>') +
       (acts ? '<div class="writing__acts">' + acts + '</div>' : '');
     grid.appendChild(el);
-  });
-
-  /* ---------- notes ---------- */
-  const notesList = $("#notesList");
-  NOTES.forEach(n => {
-    const el = document.createElement(n.file ? "a" : "div");
-    el.className = "note";
-    if (n.file) { el.href = n.file; el.target = "_blank"; el.rel = "noopener"; }
-    el.innerHTML =
-      '<span class="note__date">' + n.date + '</span>' +
-      '<span class="note__title">' + n.title + '</span>' +
-      '<span class="note__tag">' + n.tag + '</span>';
-    notesList.appendChild(el);
   });
 
   document.addEventListener("click", e => {
