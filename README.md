@@ -16,34 +16,5 @@
 
 My personal site
 
-**→ [dazmath.dev](dazmath.dev)**
-
-<br>
-
-## 🗂️ Repository
-
-```
-TheWhite73.github.io/
-│
-├── 📄 index.html                          the entire site — HTML, CSS, JS and equations
-├── 📘 README.md                           this file
-│
-├── 🖼️ img/
-│   ├── daniel.jpg                         portrait, About
-│   ├── hike-panorama.jpg                  Panorama Ridge, Whistler
-│   └── hike-garibaldi.jpg                 Garibaldi Lake
-│
-└── 📚 pdf/
-    ├── Daniel_Amaya_CV.pdf                curriculum vitae
-    └── TDA_Morse_Smale_Amaya_Segovia.pdf  directed reading, UNAM (Spanish)
-```
-
-<br>
-
-## 📫 Contact
-
-**[amayazabaladaniel@gmail.com](mailto:amayazabaladaniel@gmail.com)** ·
-[LinkedIn](https://www.linkedin.com/in/daz-math/) ·
-[GitHub](https://github.com/TheWhite73)
-
+**→ [thewhite73.github.io](thewhite73.github.io)**
 
