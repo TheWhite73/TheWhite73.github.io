@@ -85,10 +85,11 @@ img{max-width:100%}
 }
 .nav__in{display:flex;align-items:center;gap:20px;min-height:58px;padding-block:8px}
 .nav__mark{
-  font-family:var(--f-display);font-size:13px;letter-spacing:.06em;
-  color:var(--text);white-space:nowrap;
+  font-family:var(--f-display);font-size:13px;letter-spacing:.08em;
+  color:var(--text);white-space:nowrap;text-decoration:none;
+  padding:4px 2px;transition:color .18s,text-shadow .18s;
 }
-.nav__mark span{color:var(--accent)}
+.nav__mark:hover{color:var(--accent);text-decoration:none;text-shadow:var(--glow-accent)}
 .nav__links{
   display:flex;gap:18px;margin-left:auto;align-items:center;
   font-family:var(--f-mono);font-size:12.5px;letter-spacing:.04em;
@@ -550,7 +551,7 @@ h2{
 <!-- ========================= NAV ========================= -->
 <nav class="nav">
   <div class="wrap nav__in">
-    <div class="nav__mark">DANIEL AMAYA <span>ZABALA</span></div>
+    <a class="nav__mark" href="https://thewhite73.github.io/">Me</a>
     <div class="nav__links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
@@ -574,11 +575,11 @@ h2{
         <h1>Daniel Amaya Zabala</h1>
         <p class="hero__role">Scientific machine learning</p>
         <p class="hero__lede">
-          I work on the mathematics underneath modern generative models &mdash;
+          I work on the mathematics underneath modern generative models:
           <strong>inverse problems</strong>, <strong>diffusion models</strong>, and the covering
-          numbers that say how much structure a distribution really carries. I am finishing a BSc
-          in Mathematics at Universidad de Antioquia with a thesis on <strong>universal
-          approximation theorems</strong>, defending in October.
+          numbers that measure how much structure a distribution really carries. Right now I am
+          finishing a BSc in Mathematics at Universidad de Antioquia, with a thesis on
+          <strong>universal approximation theorems</strong> that I defend in October.
         </p>
 
         <figure class="hero__eq">
@@ -776,7 +777,7 @@ h2{
 <use xlink:href="#hero_sde-glyph-2-0" x="241.672201" y="12.448396"/>
 </g>
 </svg></div>
-          <figcaption>Reverse-time SDE &mdash; the score &nabla;<sub>x</sub> log p<sub>t</sub> turns noise back into data.</figcaption>
+          <figcaption>Reverse-time SDE. The score &nabla;<sub>x</sub> log p<sub>t</sub> is what turns noise back into data.</figcaption>
         </figure>
 
         <div class="linkrow">
@@ -1142,34 +1143,34 @@ h2{
         <p class="eyebrow">About</p>
         <h2>Looking for the simplest explanation</h2>
         <p>
-          I started mathematics out of curiosity &mdash; I wanted the <strong>simplest
-          explanation</strong> of a particular phenomenon, and mathematics turned out to be where
-          that search leads. At first algebra had me completely: I was reading category theory and
-          homological algebra and expected a career on the pure side, with Atiyah and Grothendieck
-          as the people to look up to.
+          I came to mathematics out of curiosity. I wanted the <strong>simplest explanation</strong>
+          of a particular phenomenon, and mathematics turned out to be where that search leads.
+          At first algebra had me completely. I was reading category theory and homological algebra,
+          I expected a career on the pure side, and Atiyah and Grothendieck were the people I
+          looked up to.
         </p>
         <p>
           Working at the <strong>UNAM</strong> changed the direction. Topological data analysis was
           new to me, and what caught my attention was seeing mathematics that sophisticated used to
-          explain a phenomenon &mdash; the geometric structure hiding inside a set of data.
+          explain something concrete: the geometric structure hiding inside a set of data.
         </p>
         <p>
-          Then I won a scholarship for an exchange semester at <strong>Saint Mary's University</strong>
+          Then I won a scholarship for an exchange semester at <strong>Saint Mary's University</strong>,
           and took a turn: graphs, network analysis, numerical analysis, artificial intelligence.
-          Afterwards I was one of 72 people awarded a <strong>Samsung Innovation Campus</strong>
-          scholarship to study machine learning and what it gets used for.
+          Not long after, I was one of 72 people awarded a <strong>Samsung Innovation Campus</strong>
+          scholarship to study machine learning and the uses it is put to.
         </p>
         <p>
-          Like any mathematician, though, I was left wanting to know what is inside the black box.
+          Like any mathematician, though, I was left wanting to know what sits inside the black box.
           That became my undergraduate thesis: <strong>universal approximation theorems</strong>,
           from Cybenko and sigmoidal functions through to Anderson's results for multivariate
           functions. It is what gave me an appetite for measure theory, functional analysis and PDEs.
         </p>
         <p>
           A <strong>Globalink</strong> scholarship took me from there to a research internship at
-          Simon Fraser University in Vancouver, working on inverse problems &mdash; building models
-          in PyTorch to find algorithms that come close to the theoretical bounds on our covering
-          numbers for a given distribution.
+          Simon Fraser University in Vancouver, working on inverse problems. My part was building
+          models in PyTorch to find algorithms that come close to the theoretical bounds on our
+          covering numbers for a given distribution.
         </p>
 
         <div class="now">
@@ -1183,10 +1184,6 @@ h2{
               <dt>Working on</dt>
               <dd>Further results on sparsity-promoting priors, with Ben Adcock, Nick Huang, Maksym Neyra-Nesterenko and Omar Pacheco.</dd>
             </div>
-            <div class="now__row">
-              <dt>Reading</dt>
-              <dd>Brezis and Kreyszig, currently on weak topologies.</dd>
-            </div>
           </dl>
         </div>
       </div>
@@ -1198,7 +1195,7 @@ h2{
 <section class="section" id="interests">
   <div class="wrap">
     <div class="section__head">
-      <h2>What I work on</h2>
+      <h2>What I like</h2>
       <p class="section__sub">
         Probability and measure theory underneath, inverse problems and diffusion models on top,
         and the question that keeps pulling me back: what did the model actually learn?
@@ -1504,8 +1501,8 @@ h2{
         <h3>Diffusion models <em>generative</em></h3>
         <p>
           Noise the data along an SDE, learn the score, run it backwards. What interests me is the
-          theory underneath &mdash; which distributions this can reach, and how many measurements
-          it takes to get there.
+          theory underneath it: which distributions this can reach, and how many measurements it
+          takes to get there.
         </p>
         <div class="eq" style="--ar:9.837"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 137.208 13.948" role="img" aria-label="equation" preserveAspectRatio="xMidYMid meet" class="eq-svg">
 <defs>
@@ -1971,10 +1968,10 @@ h2{
           <h3>Covering numbers for Bayesian inverse problems</h3>
           <p class="entry__where">Mitacs Globalink Research Internship &middot; <em>supervised by Prof. Ben Adcock</em></p>
           <ul>
-            <li>Built models in PyTorch searching for algorithms whose numerics come close to the theoretical bounds on the covering number of a given distribution &mdash; tested mainly on Fashion-MNIST and CelebA.</li>
+            <li>Built models in PyTorch searching for algorithms whose numerics come close to the theoretical bounds on the covering number of a given distribution, tested mainly on Fashion-MNIST and CelebA.</li>
             <li>Modelled and generalised Bayesian priors so that the covering number of the underlying distribution becomes a usable measure of how complex a dataset is.</li>
             <li>Scoped an open question with no predefined solution path: distilled a dense prior literature into a working framework and isolated which assumptions actually drove the results.</li>
-            <li>Still ongoing &mdash; extending the results to sparsity-promoting priors, with Ben Adcock, Nick Huang, Maksym Neyra-Nesterenko and Omar Pacheco.</li>
+            <li>Still ongoing. We are extending the results to sparsity-promoting priors, with Ben Adcock, Nick Huang, Maksym Neyra-Nesterenko and Omar Pacheco.</li>
           </ul>
           <figure class="entry__eq">
             <div class="eq eq--center" style="--ar:5.570"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 215.071 38.611" role="img" aria-label="equation" preserveAspectRatio="xMidYMid meet" class="eq-svg">
@@ -2142,7 +2139,7 @@ h2{
 <use xlink:href="#covering-glyph-3-2" x="204.660975" y="9.219119"/>
 </g>
 </svg></div>
-            <figcaption>How many &epsilon;-balls it takes to cover the distribution &mdash; the quantity the whole project is about.</figcaption>
+            <figcaption>How many &epsilon;-balls it takes to cover the distribution. This is the quantity the whole project is about.</figcaption>
           </figure>
           <div class="tags">
             <span class="tag">Bayesian inverse problems</span>
@@ -2286,7 +2283,7 @@ h2{
           <p class="entry__where">BSc thesis &middot; <em>defending mid-October 2026</em></p>
           <ul>
             <li>Working from Cybenko's theorem and sigmoidal functions through to Anderson's results for multivariate functions.</li>
-            <li>Asking what these theorems do &mdash; and do not &mdash; tell us about what a trained network has learned.</li>
+            <li>Asking what these theorems tell us, and what they do not, about what a trained network has learned.</li>
             <li>The work that pulled me toward measure theory, functional analysis and PDEs, and the reason I stopped treating the networks as given.</li>
           </ul>
           <div class="tags">
@@ -2311,7 +2308,7 @@ h2{
           <h3>Measuring node importance from global and local information</h3>
           <p class="entry__where">Undergraduate research &middot; <em>supervised by Somayeh Kafaie, PhD</em></p>
           <ul>
-            <li>Replicated the results of a paper proposing a new centrality metric &mdash; one that scores a node by combining its local importance with its global importance, rather than choosing between them.</li>
+            <li>Replicated the results of a paper proposing a new centrality metric, one that scores a node by combining its local importance with its global importance rather than choosing between them.</li>
             <li>Compared it against the standard measures to see where each one actually predicts influence in a complex network.</li>
           </ul>
           <div class="tags">
@@ -2336,7 +2333,7 @@ h2{
           <p class="entry__where">Directed reading &middot; <em>with Dr. Carlos Segovia</em></p>
           <ul>
             <li>Read the article closely and worked through the theory and the motivation behind discrete Morse&ndash;Smale complexes and their relation to topological data analysis.</li>
-            <li>Built up Morse theory on surfaces first &mdash; critical points of a height function, sublevel sets, and how the topology changes as the level passes each one.</li>
+            <li>Built up Morse theory on surfaces first: critical points of a height function, sublevel sets, and how the topology changes as the level passes each one.</li>
             <li>Replicated the Topology Toolkit examples to learn the tool.</li>
           </ul>
           <div class="tags">
@@ -2352,7 +2349,7 @@ h2{
           <figure class="figure" style="margin:0">
             <canvas id="tdaViz" width="520" height="340"
                     aria-label="A point cloud growing epsilon-balls that merge into a filtration"></canvas>
-            <figcaption>&epsilon;-balls growing over a point cloud &mdash; the filtration persistence reads.</figcaption>
+            <figcaption>&epsilon;-balls growing over a point cloud. This is the filtration that persistence reads.</figcaption>
           </figure>
         </div>
       </article>
@@ -2436,15 +2433,16 @@ h2{
   <div class="wrap">
     <div class="section__head">
       <h2>Teaching</h2>
-      <p class="entry__meta" style="margin:14px 0 0"><b>Oct 2025 &ndash; May 2026</b><span>Universidad de Antioquia</span><span>10 h / week</span></p>
+      <p class="entry__meta" style="margin:14px 0 0"><b>Oct 2025 &ndash; May 2026</b><span>Universidad de Antioquia</span></p>
     </div>
     <div class="prose">
       <p>
-        Teaching assistant in <strong>linear algebra</strong> and <strong>analytic geometry</strong>,
-        on a merit-based academic stipend. The material was abstract; the room was not uniform. Most
-        of the work was calibration &mdash; finding the level of detail a given group needed,
-        rebuilding the study material around the points where students actually got stuck, and
-        reformulating an explanation on the spot until it landed.
+        This was a merit-based academic stipend, awarded for my grade average and for how I had done
+        in the courses themselves. The work had two halves. One was preparing the support material
+        for each week's readings. The other was running eight hours of tutorials, where students
+        brought their questions, I explained the concepts again in whatever way was landing that day,
+        and we worked through problems together. The courses were <strong>linear algebra</strong>
+        and <strong>analytic geometry</strong>.
       </p>
     </div>
   </div>
@@ -2461,7 +2459,7 @@ h2{
     <div class="photos">
       <figure class="photo">
         <span class="photo__frame"><img src="img/hike-panorama.jpg" alt="Daniel looking out over an alpine lake below Panorama Ridge, Whistler" loading="lazy"></span>
-        <figcaption>Panorama Ridge, Whistler &mdash; the most recent one.</figcaption>
+        <figcaption>Panorama Ridge, Whistler. The most recent one.</figcaption>
       </figure>
       <figure class="photo">
         <span class="photo__frame"><img src="img/hike-garibaldi.jpg" alt="Garibaldi Lake with a log jam in the foreground and glaciated peaks behind" loading="lazy"></span>
@@ -2473,8 +2471,9 @@ h2{
       <article class="away__item">
         <h3>Hiking</h3>
         <p>
-          The clearest reason to have spent a summer in British Columbia. Long days, a lake at the
-          top, and no notation to keep track of.
+          I like long walks, and I like them either with friends or entirely on my own. Somewhere in
+          a conversation, or in a long enough stretch of silence, an idea usually turns up for
+          whatever problem I am stuck on.
         </p>
       </article>
       <article class="away__item">
@@ -2485,11 +2484,9 @@ h2{
         </p>
       </article>
       <article class="away__item">
-        <h3>Volunteering, and the people in it</h3>
+        <h3>Volunteering</h3>
         <p>
-          I volunteer because of who it puts me in front of. I enjoy learning from people and
-          having them teach me their way of seeing the world &mdash; that is how I get further
-          than I would on my own.
+          I like helping people, and I like the chance it gives me to learn from them.
         </p>
       </article>
     </div>
@@ -2501,7 +2498,7 @@ h2{
   <div class="wrap">
     <div class="section__head">
       <h2>Curriculum vitae</h2>
-      <p class="section__sub">The full academic record &mdash; education, awards, research, and teaching &mdash; in two pages.</p>
+      <p class="section__sub">The full academic record in two pages: education, awards, research and teaching.</p>
     </div>
     <div class="cv">
       <div>
@@ -2529,7 +2526,7 @@ h2{
             <p>Probability &middot; Analysis &middot; Linear Algebra &middot; Topology &middot; Abstract Algebra &middot; Differential Geometry</p>
           </div>
           <div class="edu__item">
-            <h3>Study abroad &mdash; Saint Mary's University</h3>
+            <h3>Study abroad at Saint Mary's University</h3>
             <div class="edu__line"><b>Halifax, CA</b><span>Sep &ndash; Dec 2024</span><span>GPA 4.15 / 4.30</span></div>
             <p>Artificial Intelligence &middot; Numerical Analysis &middot; Complex Networks &middot; French</p>
           </div>
@@ -2539,9 +2536,9 @@ h2{
           <div>
             <h4>Awards</h4>
             <ul class="awards">
-              <li class="award"><span><b>Mitacs Globalink Research Award</b> &mdash; Simon Fraser University, 2026</span></li>
+              <li class="award"><span><b>Mitacs Globalink Research Award</b>, Simon Fraser University, 2026</span></li>
               <li class="award"><span><b>Top student</b> of the 2023-2 and 2024-2 semesters, UdeA</span></li>
-              <li class="award"><span><b>ELAP scholarship</b> &mdash; Saint Mary's University, 2024-2</span></li>
+              <li class="award"><span><b>ELAP scholarship</b>, Saint Mary's University, 2024-2</span></li>
               <li class="award"><span><b>Samsung Innovation Campus scholarship</b>, 2024-2</span></li>
             </ul>
           </div>
@@ -2556,7 +2553,7 @@ h2{
           <div>
             <h4>Languages</h4>
             <div class="tags" style="margin-top:0">
-              <span class="tag">Spanish &mdash; native</span><span class="tag">English &mdash; C1</span>
+              <span class="tag">Spanish (native)</span><span class="tag">English (C1)</span>
             </div>
           </div>
         </div>
@@ -2570,19 +2567,14 @@ h2{
   <div class="wrap">
     <p class="eyebrow" style="justify-content:center">Get in touch</p>
     <h2>Happy to talk about any of this</h2>
-    <p>Research collaborations, graduate positions, or a question about something on this page &mdash; email is the fastest way to reach me.</p>
+    <p>Research collaborations, graduate positions, or a question about something on this page. Email is the fastest way to reach me.</p>
     <a class="mailto" href="mailto:amayazabaladaniel@gmail.com">amayazabaladaniel@gmail.com</a>
     <div class="linkrow">
-      <a class="btn" href="https://www.linkedin.com/in/daz-math/" target="_blank" rel="noopener">LinkedIn &mdash; /in/daz-math</a>
-      <a class="btn" href="https://github.com/TheWhite73" target="_blank" rel="noopener">GitHub &mdash; TheWhite73</a>
+      <a class="btn" href="https://www.linkedin.com/in/daz-math/" target="_blank" rel="noopener">LinkedIn &middot; /in/daz-math</a>
+      <a class="btn" href="https://github.com/TheWhite73" target="_blank" rel="noopener">GitHub &middot; TheWhite73</a>
     </div>
   </div>
 </section>
-
-<footer class="wrap foot">
-  <span>&copy; <span id="yr">2026</span> Daniel Amaya Zabala</span>
-  <span>Medell&iacute;n, CO &middot; Vancouver, CA</span>
-</footer>
 
 </main>
 
@@ -2620,8 +2612,8 @@ const WRITINGS = [
     kind: "thesis",
     title: "Universal approximation theorems",
     year: "2026",
-    venue: "BSc thesis — Universidad de Antioquia · defending mid-October",
-    blurb: "From Cybenko's theorem and sigmoidal functions to Anderson's results for multivariate functions — and what they do, and do not, say about what a trained network has learned.",
+    venue: "BSc thesis, Universidad de Antioquia · defending mid-October",
+    blurb: "From Cybenko's theorem and sigmoidal functions to Anderson's results for multivariate functions, and what they say, or fail to say, about what a trained network has learned.",
     file: null            // <-- cámbialo por "pdf/tesis.pdf"
   },
   {
@@ -2629,7 +2621,7 @@ const WRITINGS = [
     title: "Covering numbers for sparsity-promoting priors",
     year: "2026",
     authors: "B. Adcock, D. Amaya, N. Huang, M. Neyra-Nesterenko, O. Pacheco",
-    venue: "In preparation — Simon Fraser University",
+    venue: "In preparation · Simon Fraser University",
     blurb: "Extending covering-number estimates from generative priors to sparsity-promoting ones, so that the same complexity measure covers both.",
     file: null            // <-- cámbialo por "pdf/preprint-covering.pdf"
   },
@@ -2637,8 +2629,8 @@ const WRITINGS = [
     kind: "notes",
     title: "Análisis topológico de datos: complejo de Morse-Smale discreto",
     year: "Jun 2024",
-    venue: "Directed reading — UNAM, with Dr. Carlos Segovia",
-    blurb: "Morse functions on surfaces, the discrete Morse–Smale complex, and how it approximates visualisations of 3-manifolds — worked through with the Topology Toolkit.",
+    venue: "Directed reading at the UNAM, with Dr. Carlos Segovia",
+    blurb: "Morse functions on surfaces, the discrete Morse–Smale complex, and how it approximates visualisations of 3-manifolds, worked through with the Topology Toolkit.",
     lang: "Spanish",
     file: "pdf/TDA_Morse_Smale_Amaya_Segovia.pdf"
   }
@@ -2717,7 +2709,7 @@ const WRITINGS = [
       (w.authors ? '<p class="writing__authors">' + w.authors.replace("D. Amaya", "<b>D. Amaya</b>") + '</p>' : '') +
       '<p class="writing__venue">' + w.venue + '</p>' +
       '<p>' + w.blurb + '</p>' +
-      (w.file ? '' : '<p class="pending-note">In preparation &mdash; PDF coming soon</p>') +
+      (w.file ? '' : '<p class="pending-note">In preparation &middot; PDF coming soon</p>') +
       (acts ? '<div class="writing__acts">' + acts + '</div>' : '');
     grid.appendChild(el);
   });
