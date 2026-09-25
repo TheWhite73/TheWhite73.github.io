@@ -14,9 +14,9 @@
 
 ---
 
-My personal site — research, writings, projects and CV, in a single self-contained
-HTML file. No build step, no framework, no package manager. Clone it and double-click
-`index.html` and it works exactly as it does live.
+My academic homepage: research, publications, experience and CV. Plain HTML and CSS
+in a single file, with no build step, framework or package manager. Clone it and
+double-click `index.html` and it works exactly as it does live.
 
 **→ [thewhite73.github.io](https://thewhite73.github.io)**
 
@@ -24,16 +24,22 @@ HTML file. No build step, no framework, no package manager. Clone it and double-
 
 ## 📐 What's on the page
 
+Laid out like a typical researcher homepage: the things an advisor or recruiter looks
+for come first.
+
 | | Section | |
 |:--:|---|---|
-| 👤 | **About** | How I got from category theory to covering numbers, plus a *Now* panel with what I am reading and writing this month |
-| 🧭 | **What I work on** | Probability and measure theory, inverse problems, diffusion models, interpretability — each with the equation it rests on |
-| 🔬 | **Research** | Mitacs Globalink at Simon Fraser University, my BSc thesis, undergraduate research at Saint Mary's, and a directed reading with the UNAM |
-| 📄 | **Mathematical writings** | Thesis, preprints and notes, with a PDF reader built into the page |
-| 🧪 | **Projects** | A GAN-balanced chest X-ray classifier and a multi-currency expense tracker |
-| 🎓 | **Teaching** | Linear algebra and analytic geometry at Universidad de Antioquia |
-| ⛰️ | **Away from the board** | Hiking, languages, and volunteering |
-| 📑 | **Curriculum vitae** | Embedded reader and a download |
+| 👤 | **Intro** | Photo, short bio, links (Email · CV · GitHub · LinkedIn · ORCID) and a note that I am looking for MSc positions (Summer/Fall 2027) and research / ML roles |
+| 📰 | **News** | Dated one-liners, newest first |
+| 🧭 | **Research interests** | Inverse problems, diffusion models, approximation theory, probability and measure |
+| 📄 | **Publications & writing** | Preprint in preparation, BSc thesis, UNAM notes, with `[pdf]` links |
+| 🔬 | **Research experience** | SFU (Mitacs Globalink), BSc thesis, Saint Mary's, UNAM, and teaching at UdeA |
+| 🧪 | **Projects** | GAN-balanced chest X-ray classifier |
+| 🎓 | **Education & awards** | Degrees, GPA, awards and skills |
+| ⛰️ | **Outside research** | Hiking, languages, volunteering |
+
+The earlier dark neon design, with its animations and compiled LaTeX, is kept at
+[`retro.html`](https://thewhite73.github.io/retro.html) and linked from the footer.
 
 <br>
 
@@ -42,11 +48,12 @@ HTML file. No build step, no framework, no package manager. Clone it and double-
 ```
 TheWhite73.github.io/
 │
-├── 📄 index.html                          the entire site — HTML, CSS, JS and equations
+├── 📄 index.html                          the site: HTML and CSS
+├── 🕹️ retro.html                          the previous retro/neon version
 ├── 📘 README.md                           this file
 │
 ├── 🖼️ img/
-│   ├── daniel.jpg                         portrait, About
+│   ├── daniel.jpg                         portrait
 │   ├── hike-panorama.jpg                  Panorama Ridge, Whistler
 │   └── hike-garibaldi.jpg                 Garibaldi Lake
 │
@@ -59,66 +66,48 @@ TheWhite73.github.io/
 
 ## ⚙️ How it is built
 
-**One file, zero dependencies.** Everything — layout, styles, behaviour — lives in
-`index.html`. Nothing is fetched at runtime except the web fonts.
-
-**🧮 Real LaTeX, no MathJax.** Every equation is compiled with `pdflatex`, converted to
-SVG with `pdftocairo`, stripped to pure path data and inlined. They render identically
-in every browser, appear instantly with no layout shift, and work offline. The trade-off
-is that they are no longer editable as text.
-
-**✨ Five animations, no libraries.** Plain `<canvas>` and SVG:
-
-| | |
-|---|---|
-| **Hero** | A variance-preserving diffusion over a two-armed spiral — structure dissolves into Gaussian noise and reassembles. The clock and the equations below it stay in sync with the phase. |
-| **Research · SFU** | A five-state Markov chain with a token hopping between states |
-| **Research · thesis** | A feed-forward network with signals propagating through its layers |
-| **Research · SMU** | A graph with node radius scaled by centrality |
-| **Research · UNAM** | ε-balls growing over a point cloud — the filtration persistence reads |
-
-**♿ Accessible and responsive.** Every animation honours `prefers-reduced-motion` by
-freezing on a meaningful still frame. The layout works down to phone width with no
-horizontal scroll.
-
-**🎨 Deliberately single-theme.** Dark, with sodium amber against cold blue. All colours
-are CSS custom properties in the `:root` block.
+- **One static file.** No JavaScript needed apart from one line that sets the footer
+  year. Only the web fonts (Source Serif 4 and Inter) are fetched.
+- **Light and dark.** Light by default and dark when the visitor's system asks for it,
+  through `prefers-color-scheme`. All colours are custom properties in `:root`.
+- **Findable.** Meta description, Open Graph tags for link previews, and schema.org
+  `Person` data so search engines can connect the site to GitHub and LinkedIn.
+- **Responsive and printable.** Works down to phone width with no horizontal scroll;
+  the print stylesheet drops the navigation and photos.
 
 <br>
 
 ## ✍️ Updating it
 
-Everything editable lives at the top of the `<script>` block at the end of `index.html`.
+<details>
+<summary><strong>Add a news item</strong></summary>
+
+<br>
+
+Add an `<li>` at the top of the list under `id="news"`:
+
+```html
+<li><time>Nov 2026</time><span>What happened, in one sentence.</span></li>
+```
+</details>
 
 <details>
 <summary><strong>Publish the thesis or a preprint</strong></summary>
 
 <br>
 
-Drop the PDF into `pdf/`, then point the entry at it in the `WRITINGS` list:
+Drop the PDF into `pdf/`, then in its entry under `id="publications"`, remove the
+`in preparation` badge and add a links row:
 
-```js
-file: null                  // before
-file: "pdf/tesis.pdf"       // after
+```html
+<div class="pub__links">
+  <a href="pdf/thesis.pdf" target="_blank" rel="noopener">pdf</a>
+  <a href="https://arxiv.org/abs/..." target="_blank" rel="noopener">arXiv</a>
+  <a href="https://github.com/..." target="_blank" rel="noopener">code</a>
+</div>
 ```
 
-The card stops saying *In preparation* and grows three buttons: **Read here** (opens a
-viewer inside the page), **New tab** and **Download**.
-
-To add a new piece, copy a block into the list:
-
-```js
-{
-  kind: "preprint",                     // "thesis" | "preprint" | "notes" | "talk"
-  title: "Title of the piece",
-  year: "2026",
-  authors: "B. Adcock, D. Amaya, ...",  // optional — my name is highlighted automatically
-  venue: "Where, with whom",
-  blurb: "Two or three lines on what it is about.",
-  lang: "Spanish",                      // optional, only if it is not in English
-  file: "pdf/file.pdf"                  // or null if it does not exist yet
-},
-```
+Wrap your own name in `<b>…</b>` in the author list so it stands out.
 </details>
 
 <details>
@@ -126,37 +115,24 @@ To add a new piece, copy a block into the list:
 
 <br>
 
-Same filename, same folder, nothing else to change. The embedded reader and the download
-buttons already point there. The portrait is cropped to 4:5 and the landscapes to 4:3, so
-images roughly in those proportions survive the crop best.
+Same filename, same folder, nothing else to change. The portrait is shown at 4:5 and the
+landscapes at 4:3, so images roughly in those proportions survive the crop best.
 </details>
 
 <details>
-<summary><strong>Change the palette</strong></summary>
+<summary><strong>Change the colours</strong></summary>
 
 <br>
 
 | Variable | Role |
 |---|---|
-| `--accent` | Sodium amber — the one warm light; buttons and primary links |
-| `--cool` | Cold blue — equations, labels, detail |
-| `--hot` | Signage red — used sparingly, on purpose |
-| `--deep` | Indigo haze |
-| `--ink`, `--ink-2`, `--ink-3` | The three background levels |
+| `--accent` | Links and the highlight bar |
+| `--accent-soft` | Background of the "looking for" callout |
+| `--text`, `--text-2`, `--text-3` | Three levels of text emphasis |
+| `--bg`, `--surface`, `--rule` | Page, tags and hairlines |
 
-Changing one line in `:root` changes the whole page. The name in the hero cycles its glow
-through blues and violets via `@keyframes led` — adjust the `12s` on the `h1` rule to
-change the pace.
-</details>
-
-<details>
-<summary><strong>Fonts</strong></summary>
-
-<br>
-
-From Google Fonts: **Michroma** for the wordmark, **Chakra Petch** for headings,
-**IBM Plex Sans** for body text and **IBM Plex Mono** for labels and metadata. The mono
-and sans pair deliberately with the Computer Modern of the compiled equations.
+Each is defined twice: once in `:root` for light mode and again inside the
+`prefers-color-scheme: dark` block.
 </details>
 
 <br>
