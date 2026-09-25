@@ -29,12 +29,12 @@ for come first.
 
 | | Section | |
 |:--:|---|---|
-| 👤 | **Intro** | Photo, short bio, links (Email · CV · GitHub · LinkedIn) and a note that I am looking for MSc positions and research / ML roles |
+| 👤 | **Intro** | Photo, short bio, links (Email · CV · GitHub · LinkedIn · ORCID) and a note that I am looking for MSc positions (Summer/Fall 2027) and research / ML roles |
 | 📰 | **News** | Dated one-liners, newest first |
 | 🧭 | **Research interests** | Inverse problems, diffusion models, approximation theory, probability and measure |
 | 📄 | **Publications & writing** | Preprint in preparation, BSc thesis, UNAM notes, with `[pdf]` links |
 | 🔬 | **Research experience** | SFU (Mitacs Globalink), BSc thesis, Saint Mary's, UNAM, and teaching at UdeA |
-| 🧪 | **Projects** | GAN-balanced chest X-ray classifier, multi-currency expense tracker |
+| 🧪 | **Projects** | GAN-balanced chest X-ray classifier |
 | 🎓 | **Education & awards** | Degrees, GPA, awards and skills |
 | ⛰️ | **Outside research** | Hiking, languages, volunteering |
 
