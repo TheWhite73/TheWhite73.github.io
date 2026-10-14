@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading &middot; Daniel Amaya Zabala</title>
+<meta name="description" content="Books, papers and lecture notes Daniel Amaya Zabala recommends, with a note on each.">
+<meta name="author" content="Daniel Amaya Zabala">
+<link rel="canonical" href="https://thewhite73.github.io/reading.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reading &middot; Daniel Amaya Zabala">
+<meta property="og:description" content="Books, papers and lecture notes worth passing on.">
+<meta property="og:url" content="https://thewhite73.github.io/reading.html">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4f8c'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' text-anchor='middle' fill='%23fff'%3EDA%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap">
+
+<style>
+/* ------------------------------------------------------------
+   Same tokens as the home page. Keep the two in step.
+   ------------------------------------------------------------ */
+:root{
+  --bg:#ffffff;
+  --surface:#f6f7f9;
+  --text:#1c1f24;
+  --text-2:#4a515c;
+  --text-3:#737b87;
+  --rule:#e3e6ea;
+  --accent:#1d4f8c;
+  --accent-soft:#e8eef7;
+
+  --f-serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --f-sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+
+  --maxw:820px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#121417;
+    --surface:#1a1d21;
+    --text:#e6e8eb;
+    --text-2:#b3b9c2;
+    --text-3:#8a919b;
+    --rule:#2a2f36;
+    --accent:#8db6ec;
+    --accent-soft:#1b2838;
+    color-scheme:dark;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--f-sans);font-size:16.5px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+
+/* ---------------- nav ---------------- */
+.nav{
+  position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.nav .wrap{display:flex;align-items:center;gap:20px;min-height:52px}
+.nav__name{font-family:var(--f-serif);font-weight:600;font-size:17px;color:var(--text);white-space:nowrap}
+.nav__name:hover{text-decoration:none}
+.nav__links{display:flex;gap:18px;margin-left:auto;font-size:14.5px;overflow-x:auto;scrollbar-width:none}
+.nav__links::-webkit-scrollbar{display:none}
+.nav__links a{color:var(--text-2);white-space:nowrap}
+.nav__links a:hover{color:var(--accent);text-decoration:none}
+.nav__links a[aria-current]{color:var(--accent);font-weight:500}
+@media (max-width:620px){.nav__name{display:none}.nav__links{margin-left:0}}
+
+/* ---------------- page head ---------------- */
+.pagehead{padding-block:48px 8px}
+h1{font-family:var(--f-serif);font-weight:600;font-size:clamp(28px,5vw,36px);line-height:1.2;margin:0 0 10px;letter-spacing:-.01em}
+.pagehead p{color:var(--text-2);margin:0;max-width:62ch}
+
+/* ---------------- shelves ---------------- */
+section{padding-block:36px 8px}
+h2{
+  font-family:var(--f-serif);font-weight:600;font-size:23px;margin:0 0 18px;
+  padding-bottom:8px;border-bottom:1px solid var(--rule);
+  display:flex;align-items:baseline;gap:10px;
+}
+h2 .count{font-family:var(--f-sans);font-size:13.5px;font-weight:500;color:var(--text-3)}
+
+.shelf{list-style:none;margin:0;padding:0;display:grid;gap:26px}
+.entry__title{font-weight:600;font-size:16.5px;line-height:1.4}
+.entry__by{font-size:15px;color:var(--text-2);margin-top:1px}
+.entry__note{margin:7px 0 0;font-size:15.5px;color:var(--text)}
+.entry__links{font-size:14.5px;margin-top:5px}
+.entry__links a::before{content:"["}
+.entry__links a::after{content:"]"}
+.badge{
+  display:inline-block;font-size:12px;font-weight:500;line-height:1.5;
+  padding:0 7px;border-radius:4px;background:var(--surface);border:1px solid var(--rule);
+  color:var(--text-3);vertical-align:1px;margin-left:6px;
+}
+.empty{
+  border:1px dashed var(--rule);background:var(--surface);border-radius:6px;
+  padding:28px 22px;text-align:center;color:var(--text-3);font-size:15px;
+}
+
+footer{margin-top:48px;padding-block:24px 40px;border-top:1px solid var(--rule);font-size:14px;color:var(--text-3)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 20px}
+
+@media print{.nav,footer{display:none}body{font-size:12pt}a{color:inherit}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="nav__name" href="index.html">Daniel Amaya Zabala</a>
+    <div class="nav__links">
+      <a href="index.html#news">News</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#education">Education</a>
+      <a href="reading.html" aria-current="page">Reading</a>
+      <a href="pdf/Daniel_Amaya_CV.pdf">CV</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+<header class="pagehead">
+  <h1>Reading</h1>
+  <p>
+    Books, papers and lecture notes I have read and would hand to someone else, with a note on
+    why. Mathematics mostly, and whatever else earned a place.
+  </p>
+</header>
+
+<div id="shelves"></div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Daniel Amaya Zabala &middot; Medell&iacute;n &middot; Vancouver</span>
+    <span><a href="index.html">Back to the main page</a></span>
+  </div>
+</footer>
+
+<script>
+/* ==================================================================
+   ===  TUS RECOMENDACIONES  ========================================
+   ==================================================================
+   Para añadir una, copia un bloque { ... } y pégalo en la lista,
+   separado por coma. El orden dentro de cada grupo es el que pongas.
+
+   kind:  "book" | "paper" | "lecture"
+   url:   enlace, o null si no quieres poner ninguno
+   note:  lo que tú dirías de él. Es lo único que no se encuentra
+          buscando el título, así que es la parte que vale.
+   ================================================================== */
+
+const READING = [
+  {
+    kind: "book",
+    title: "Functional Analysis, Sobolev Spaces and Partial Differential Equations",
+    by: "Haim Brezis",
+    year: "2011",
+    url: null,
+    note: "The book I keep going back to. It builds the functional analysis first and then spends the second half showing what it was for, which is the order that made the subject click for me."
+  },
+  {
+    kind: "book",
+    title: "Introductory Functional Analysis with Applications",
+    by: "Erwin Kreyszig",
+    year: "1978",
+    url: null,
+    note: "Slower and gentler than Brezis, and better as a first pass. I read the two side by side: Kreyszig to understand the idea, Brezis to see it done properly."
+  },
+  {
+    kind: "book",
+    title: "High-Dimensional Probability: An Introduction with Applications in Data Science",
+    by: "Roman Vershynin",
+    year: "2018",
+    url: null,
+    note: "Where covering numbers and sub-gaussian distributions stop being technical conditions and start being tools. Start here if you want to know why high dimensions behave the way they do."
+  },
+  {
+    kind: "paper",
+    title: "How many measurements are enough? Bayesian recovery in inverse problems with general distributions",
+    by: "Ben Adcock, Nick Huang",
+    year: "2025",
+    url: "https://arxiv.org/abs/2505.10630",
+    note: "The paper my internship grew out of. It asks how many measurements you need to recover a signal when the prior is a general distribution, and answers with covering numbers."
+  },
+  {
+    kind: "paper",
+    title: "Morse Theory for Cell Complexes",
+    by: "Robin Forman",
+    year: "1998",
+    url: "https://doi.org/10.1006/aima.1997.1650",
+    note: "Classical Morse theory rebuilt so a computer can hold it. Topological data analysis stands on this paper, and it reads far better than its reputation suggests."
+  },
+  {
+    kind: "paper",
+    title: "Approximation by Superpositions of a Sigmoidal Function",
+    by: "George Cybenko",
+    year: "1989",
+    url: "https://doi.org/10.1007/BF02551274",
+    note: "Where my thesis starts. Eleven pages proving a neural network can approximate any continuous function, and saying nothing about how to find it. That gap is the interesting part."
+  }
+];
+
+/* ==================================================================
+   ===  A PARTIR DE AQUÍ NO NECESITAS TOCAR NADA  ===================
+   ================================================================== */
+
+(function () {
+  "use strict";
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  const GROUPS = [
+    { kind: "book",    heading: "Books",        id: "books"    },
+    { kind: "paper",   heading: "Papers",       id: "papers"   },
+    { kind: "lecture", heading: "Lecture notes", id: "lectures" }
+  ];
+  const host = document.getElementById("shelves");
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c]));
+
+  if (!READING.length) {
+    host.innerHTML = '<div class="empty">Nothing here yet.</div>';
+    return;
+  }
+
+  GROUPS.forEach(g => {
+    const items = READING.filter(r => r.kind === g.kind);
+    if (!items.length) return;
+
+    const sec = document.createElement("section");
+    sec.id = g.id;
+    sec.setAttribute("aria-labelledby", g.id + "-h");
+
+    const rows = items.map(r => {
+      const title = r.url
+        ? '<a href="' + esc(r.url) + '" target="_blank" rel="noopener">' + esc(r.title) + "</a>"
+        : esc(r.title);
+      return "<li>" +
+        '<div class="entry__title">' + title + '<span class="badge">' + esc(r.year) + "</span></div>" +
+        '<div class="entry__by">' + esc(r.by) + "</div>" +
+        '<p class="entry__note">' + esc(r.note) + "</p>" +
+        (r.url ? '<div class="entry__links"><a href="' + esc(r.url) + '" target="_blank" rel="noopener">link</a></div>' : "") +
+        "</li>";
+    }).join("");
+
+    sec.innerHTML =
+      '<h2 id="' + g.id + '-h">' + g.heading + ' <span class="count">' + items.length + "</span></h2>" +
+      '<ul class="shelf">' + rows + "</ul>";
+    host.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>
